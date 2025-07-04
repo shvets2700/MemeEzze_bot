@@ -3,9 +3,9 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
 # Отримуємо токен з середовища
-TOKEN = os.getenv("BOT_TOKEN")
+TOKEN = os.getenv("7995176267:AAFMhD79vq_DmYfMz7RZRpx7ID-algTdfBg")
 if not TOKEN:
-    raise ValueError("❌ BOT_TOKEN не передано! Перевір Environment Variables у Render.")
+    raise ValueError("7995176267:AAFMhD79vq_DmYfMz7RZRpx7ID-algTdfBg")
 
 # Створюємо застосунок (бота)
 app = ApplicationBuilder().token(TOKEN).build()

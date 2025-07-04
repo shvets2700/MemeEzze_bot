@@ -10,7 +10,7 @@ if not TOKEN:
 app = ApplicationBuilder().token(TOKEN).build()
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("✅ Привіт! Бот працює!")
+    await update.message.reply_text(" Привіт! Бот працює!")
 
 app.add_handler(CommandHandler("start", start))
 app.run_polling()

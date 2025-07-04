@@ -12,7 +12,7 @@ app = ApplicationBuilder().token(TOKEN).build()
 
 # Обробник команди /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("✅ Бот працює!")
+    await update.message.reply_text(" Бот працює!")
 
 # Додаємо обробник до застосунку
 app.add_handler(CommandHandler("start", start))

@@ -9,6 +9,6 @@ services:
         value: 8197159766:AAGLdr9BjBf6gvyCIqrKXk3nFPipXVCWvBE
     region: oregon
     buildCommand: pip install -r requirements.txt
-    startCommand: python main.py
+    startCommand: main.py
     autoDeployTrigger: commit
 version: "1"

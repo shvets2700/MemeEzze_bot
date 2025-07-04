@@ -6,7 +6,7 @@ services:
     plan: free
     envVars:
       - key: BOT_TOKEN
-        value: 8197159766:AAGLdr9BjBf6gvyCIqrKXk3nFPipXVCWvBE
+        value: 7995176267:AAFMhD79vq_DmYfMz7RZRpx7ID-algTdfBg
     region: oregon
     buildCommand: pip install -r requirements.txt
     startCommand: main.py

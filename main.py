@@ -2,16 +2,20 @@ import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
-TOKEN = os.getenv("7995176267:AAFMhD79vq_DmYfMz7RZRpx7ID-algTdfBg")  # Витягуємо токен з середовища
-
+# Отримуємо токен з середовища
+TOKEN = os.getenv("BOT_TOKEN")
 if not TOKEN:
-    raise ValueError(" BOT_TOKEN 7995176267:AAFMhD79vq_DmYfMz7RZRpx7ID-algTdfBg!")
+    raise ValueError("❌ BOT_TOKEN не передано! Перевір Environment Variables у Render.")
 
+# Створюємо застосунок (бота)
 app = ApplicationBuilder().token(TOKEN).build()
 
+# Обробник команди /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(" Привіт! Бот працює!")
+    await update.message.reply_text("✅ Бот працює!")
 
+# Додаємо обробник до застосунку
 app.add_handler(CommandHandler("start", start))
-app.run_polling()
 
+# Запускаємо бота
+app.run_polling()

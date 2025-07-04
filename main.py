@@ -5,7 +5,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 TOKEN = os.getenv("7995176267:AAFMhD79vq_DmYfMz7RZRpx7ID-algTdfBg")  # Витягуємо токен з середовища
 
 if not TOKEN:
-    raise ValueError("❌ BOT_TOKEN не встановлений у середовищі!")
+    raise ValueError("❌ BOT_TOKEN 7995176267:AAFMhD79vq_DmYfMz7RZRpx7ID-algTdfBg!")
 
 app = ApplicationBuilder().token(TOKEN).build()
 

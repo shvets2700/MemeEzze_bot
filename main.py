@@ -1,24 +1,16 @@
 import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
-from dotenv import load_dotenv
 
-load_dotenv()  # Завантажити змінні з .env файлу
-
-# Отримуємо токен з середовища
+# Беремо токен з оточення
 TOKEN = os.getenv("BOT_TOKEN")
 if not TOKEN:
-    raise ValueError("BOT_TOKEN is not set")
+    raise ValueError("❌ BOT_TOKEN не передано! Перевір Environment Variables у Render.")
 
-# Створюємо застосунок (бота)
 app = ApplicationBuilder().token(TOKEN).build()
 
-# Обробник команди /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Бот працює!")
+    await update.message.reply_text("✅ Бот працює!")
 
-# Додаємо обробник до застосунку
 app.add_handler(CommandHandler("start", start))
-
-# Запускаємо бота
 app.run_polling()
